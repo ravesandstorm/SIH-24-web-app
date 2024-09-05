@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Load Forecasting - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.jpg" alt="National Emblem">
+        </div>
+        <div class="header-title">
+            <h1>Delhi Load Forecasting System</h1>
+            <div class="sub-title">Government of Delhi, Ministry of Power</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="load-profile.html">Load Profile</a></li>
+                <li><a href="challenges.html">Challenges</a></li>
+                <li><a href="solution.html">AI-Based Solution</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-wrapper">
+            <!-- Image Slider Section -->
+            <section class="image-slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="./delhis-power-demand-peaks-at-6780-mw-may-8000-mw-this-summer-discoms.webp" alt="Power Distribution" class="slide-image">
+                        <div class="caption">Transmitting Silently, Surely and Efficiently</div>
+                    </div>
+                    <div class="slide">
+                        <img src="./36391bf2fc96d23a1b1c0dde0dbf818c5d93e164_1200x900.jpeg.jpg" alt="Load Management" class="slide-image">
+                        <div class="caption">Committed to electrifying Delhi Everyday</div>
+                    </div>
+                    <div class="slide">
+                        <img src="./portrait-India-building-architecture-night-temple-1111214-wallhere.com.jpg" alt="AI Forecasting" class="slide-image">
+                        <div class="caption">Proud to be lighting up Delhi</div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </section>
+            <div id="newValues" class="new-values">
+                <!-- Predicted values are displayed here -->
+            </div>
+            <!-- Prediction Form Section -->
+            <section class="prediction-form">
+                <h2>Past Power Load Data</h2>
+                <form id="predictForm">
+                    <label for="inputDate">Day and Month (DD-MM):</label>
+                <!-- Separate inputs for day and month -->
+<input type="number" id="inputDay" name="day" min="1" max="31" placeholder="Day" required>
+<input type="number" id="inputMonth" name="month" min="1" max="12" placeholder="Month" required>
+<!--select id="inputMonth" name="month" required>
+    <option value="1">January</option>
+    <option value="2">February</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+</select-->
+
+                    <label for="inputTime">Select Time:</label>
+                    <select id="inputTime">
+                        <option value="09:00">09:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="15:00">15:00</Option>
+                        <option value="21:00">21:00</option>
+                    </select>
+    
+                    <button type="submit">Get Prediction</button>
+                </form>                
+                <div id="predictionResults" class="prediction-results">
+                    <!-- Past results are displayed here -->
+                </div>
+
+            </section>
+
+            <!-- Information Cards Section -->
+            <section class="info-cards">
+                <div class="card">
+                    <h3>Load Profile</h3>
+                    <p>Explore the unique power load profile of Delhi, with variations in summer and winter, and day and night, managed effectively for optimal supply.</p>
+                    <a href="load-profile.html" class="btn">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Challenges</h3>
+                    <p>Understand the challenges in managing power loads in a city with a diverse profile, and how these are being addressed.</p>
+                    <a href="challenges.html" class="btn">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>AI-Based Solution</h3>
+                    <p>Discover our AI-based solutions that optimize load forecasting to ensure a stable and reliable power supply for the city.</p>
+                    <a href="solution.html" class="btn">Learn More</a>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Government of Delhi. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+</body>
+</html>
