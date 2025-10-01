@@ -1,8 +1,7 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
-from typing import List
 import only4
 
 app = FastAPI()
@@ -52,3 +51,7 @@ def predict(request: PredictRequest):
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the FastAPI application!"}
+
+if __name__=='__main__':
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
