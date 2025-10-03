@@ -4,6 +4,7 @@ console.log('Website loaded successfully.');
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const slideInterval = 3000; // Change slide every 3 seconds
+var API_URL = 'http://127.0.0.1:8000'
 
 // Function to change slides
 function changeSlide(n) {
@@ -37,7 +38,7 @@ function setDefaultDate() {
 // Fetch the API result and display it
 async function fetchInitialPrediction() {
     try {
-        const response = await fetch('http://127.0.0.1:8000/getval/', {
+        const response = await fetch(`${API_URL}/getval/`, {
             method: 'POST',
         });
         const result = await response.json();
